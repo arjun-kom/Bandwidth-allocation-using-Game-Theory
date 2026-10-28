@@ -1,0 +1,13 @@
+services:
+  bandwidth:
+    build: .
+    image: bandwidth-allocation:latest
+    container_name: bandwidth-allocation
+    ports:
+      - "${PORT:-8080}:8000"   # host port: set PORT to change it
+    volumes:
+      - run-history:/app/data   # keeps the SQLite run history between restarts
+    restart: unless-stopped
+
+volumes:
+  run-history:

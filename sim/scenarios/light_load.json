@@ -1,0 +1,15 @@
+{
+  "name": "Light load",
+  "description": "Total demand is below capacity, so every mechanism should give everyone what they ask for.",
+  "capacity": 50,
+  "ticks": 30,
+  "demand_noise": 0.1,
+  "seed": 1,
+  "users": [
+    {"type": "video", "count": 2},
+    {"type": "gaming", "count": 1},
+    {"type": "web", "count": 3},
+    {"type": "call", "count": 1}
+  ],
+  "events": []
+}

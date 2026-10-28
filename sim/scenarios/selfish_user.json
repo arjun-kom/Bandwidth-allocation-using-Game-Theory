@@ -1,0 +1,19 @@
+{
+  "name": "Selfish user",
+  "description": "download-1 really needs 4 Mbps. At tick 20 it starts claiming 40 Mbps. Mechanisms that trust the claim hand it bandwidth it cannot use, taken from the honest users.",
+  "capacity": 40,
+  "ticks": 60,
+  "demand_noise": 0.0,
+  "seed": 4,
+  "users": [
+    {"type": "video", "count": 2},
+    {"type": "call", "count": 1},
+    {"type": "web", "count": 3},
+    {"type": "download", "count": 1, "demand": 4},
+    {"type": "download", "count": 2, "demand": 20}
+  ],
+  "events": [
+    {"tick": 20, "action": "set", "id": "download-1", "params": {"reported_demand": 40}, "label": "download-1 starts claiming 40 Mbps (really needs 4)"},
+    {"tick": 45, "action": "set", "id": "download-1", "params": {"honest": true}, "label": "download-1 is honest again"}
+  ]
+}

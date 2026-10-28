@@ -1,0 +1,19 @@
+{
+  "name": "Peak hour",
+  "description": "20 users with a mix of needs and total demand at about twice the link capacity.",
+  "capacity": 60,
+  "ticks": 60,
+  "demand_noise": 0.15,
+  "seed": 2,
+  "users": [
+    {"type": "video", "count": 6},
+    {"type": "gaming", "count": 3},
+    {"type": "call", "count": 3},
+    {"type": "web", "count": 6},
+    {"type": "download", "count": 2}
+  ],
+  "events": [
+    {"tick": 20, "action": "join", "type": "video", "count": 2},
+    {"tick": 40, "action": "leave", "type": "web", "count": 3}
+  ]
+}

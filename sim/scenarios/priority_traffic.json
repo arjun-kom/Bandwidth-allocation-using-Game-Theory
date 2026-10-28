@@ -1,0 +1,18 @@
+{
+  "name": "Priority traffic",
+  "description": "A crowded link where an emergency video call (weight 5) and a premium user (weight 2) arrive.",
+  "capacity": 30,
+  "ticks": 60,
+  "demand_noise": 0.1,
+  "seed": 5,
+  "users": [
+    {"type": "video", "count": 3},
+    {"type": "gaming", "count": 2},
+    {"type": "web", "count": 4},
+    {"type": "download", "count": 2}
+  ],
+  "events": [
+    {"tick": 15, "action": "join", "type": "call", "weight": 5, "budget": 50},
+    {"tick": 30, "action": "join", "type": "video", "weight": 2, "budget": 20}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Heavy user joins",
+  "description": "A large download and then a second one start mid-run. Watch whether the others are protected.",
+  "capacity": 40,
+  "ticks": 60,
+  "demand_noise": 0.05,
+  "seed": 3,
+  "users": [
+    {"type": "video", "count": 2},
+    {"type": "gaming", "count": 2},
+    {"type": "call", "count": 1},
+    {"type": "web", "count": 4}
+  ],
+  "events": [
+    {"tick": 15, "action": "join", "type": "download", "demand": 100, "budget": 30},
+    {"tick": 35, "action": "join", "type": "download", "demand": 100, "budget": 30}
+  ]
+}
